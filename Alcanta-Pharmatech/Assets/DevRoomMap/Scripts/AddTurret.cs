@@ -7,7 +7,7 @@ public class AddTurret : MonoBehaviour
     public GameObject Lame, Blaster, Canon, positionSelect;
     public void BuyLame()
     {
-        //buy Lame
+        Instantiate(Lame, positionSelect.transform.position, Quaternion.identity);
         Debug.Log("lame acheter");
         CloseWindow();
     }
@@ -16,16 +16,16 @@ public class AddTurret : MonoBehaviour
         Instantiate(Blaster,positionSelect.transform.position,Quaternion.identity);
         Debug.Log("blaster acheter");
         CloseWindow();
-        positionSelect.SetActive(false);
     }
     public void BuyCanon()
     {
-        //buy canon
+        Instantiate(Canon, positionSelect.transform.position, Quaternion.identity);
         Debug.Log("canon acheter");
         CloseWindow();
     }
     void CloseWindow()
     {
         this.gameObject.SetActive(false);
+        positionSelect.SetActive(false);
     }
 }
