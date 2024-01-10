@@ -7,9 +7,11 @@ public class Movement : MonoBehaviour
     [SerializeField]public List<GameObject> movements = new List<GameObject>();
     int tailleList;
     int indexPlayer = 0;
+    public int vie;
     private void Start()
     {
         tailleList = movements.Count;
+        Physics.IgnoreLayerCollision(6, 6, true);
     }
 
     private void FixedUpdate()
@@ -24,5 +26,13 @@ public class Movement : MonoBehaviour
             Destroy(gameObject);
             //vie--
         }
+        if(vie <= 0)
+        {
+            Die();
+        }
+    }
+    public void Die()
+    {
+        Destroy(this.gameObject);
     }
 }

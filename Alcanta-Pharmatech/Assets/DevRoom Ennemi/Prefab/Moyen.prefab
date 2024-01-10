@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 916374427601301460}
   - component: {fileID: 1179697886354450834}
   - component: {fileID: 181569592772254942}
-  m_Layer: 0
+  - component: {fileID: 7769756888914804847}
+  m_Layer: 6
   m_Name: Moyen
   m_TagString: ennemi
   m_Icon: {fileID: 0}
@@ -120,3 +121,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vitesse: 0.5
   movements: []
+  vie: 20
+--- !u!54 &7769756888914804847
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6784371718191405300}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 1

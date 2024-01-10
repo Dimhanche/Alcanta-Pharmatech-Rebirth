@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 1340669281067974465}
   - component: {fileID: 220600504061585045}
   - component: {fileID: 1374074997583162234}
-  m_Layer: 0
+  - component: {fileID: 2321567143530873286}
+  m_Layer: 6
   m_Name: fast
   m_TagString: ennemi
   m_Icon: {fileID: 0}
@@ -120,3 +121,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vitesse: 1
   movements: []
+  vie: 15
+--- !u!54 &2321567143530873286
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3118138395263051459}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 1
