@@ -48,6 +48,8 @@ MonoBehaviour:
   cooldown: 1.5
   damage: 10
   range: 1.5
+  basic: {fileID: 2100000, guid: b586718a059638c419c12ecd61ee83e2, type: 2}
+  blood: {fileID: 2100000, guid: 94dcda20f9b021e43a41b965530423f0, type: 2}
 --- !u!1 &6892190365757432770
 GameObject:
   m_ObjectHideFlags: 0

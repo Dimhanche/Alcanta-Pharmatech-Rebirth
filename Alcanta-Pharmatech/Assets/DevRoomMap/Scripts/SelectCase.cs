@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SelectCase : MonoBehaviour
 {
-    [SerializeField]private GameObject select,marketHud;
+    [SerializeField]private GameObject select,marketHud,cameraIso;
     void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
