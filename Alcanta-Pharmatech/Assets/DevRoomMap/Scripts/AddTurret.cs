@@ -5,27 +5,38 @@ using UnityEngine;
 public class AddTurret : MonoBehaviour
 {
     public GameObject Lame, Blaster, Canon, positionSelect;
+    [SerializeField] private int priceLame,priceBlaster,priceCanon;
+    [SerializeField] private Money money;
     public void BuyLame()
     {
-        //buy Lame
-        Debug.Log("lame acheter");
-        CloseWindow();
+        if(money.GetMoney() >= priceLame)
+        {
+            Instantiate(Lame, positionSelect.transform.position, Quaternion.identity);
+            money.Remove(priceLame);
+            CloseWindow();
+        }
     }
     public void BuyBlaster()
     {
-        Instantiate(Blaster,positionSelect.transform.position,Quaternion.identity);
-        Debug.Log("blaster acheter");
-        CloseWindow();
-        positionSelect.SetActive(false);
+        if(money.GetMoney() >= priceBlaster)
+        {
+            Instantiate(Blaster, positionSelect.transform.position, Quaternion.identity);
+            money.Remove(priceBlaster);
+            CloseWindow();
+        }
     }
     public void BuyCanon()
     {
-        //buy canon
-        Debug.Log("canon acheter");
-        CloseWindow();
+        if(money.GetMoney() >= priceCanon)
+        {
+            Instantiate(Canon, positionSelect.transform.position, Quaternion.identity);
+            money.Remove(priceCanon);
+            CloseWindow();
+        }
     }
     void CloseWindow()
     {
         this.gameObject.SetActive(false);
+        positionSelect.SetActive(false);
     }
 }
