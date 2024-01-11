@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class End : MonoBehaviour
 {
-    GameManager manager;
+    MenuManager manager;
     private void Awake()
     {
 
-        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        manager = GameObject.Find("MenuManager").GetComponent<MenuManager>();
     }
     private void OnCollisionEnter(Collision collision)
     {

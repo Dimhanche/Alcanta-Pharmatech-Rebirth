@@ -3,11 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    [Header ("gameobjects")]
+    [SerializeField] private int vie = 3;
     public GameObject menuCredits;
     public GameObject menuOptions;
     public GameObject menuQuit;
     public GameObject menuInGame;
-    // Start is called before the first frame update
     void Start()
     {
         menuCredits.SetActive(false);
@@ -15,8 +16,6 @@ public class MenuManager : MonoBehaviour
         menuQuit.SetActive(false);
         menuInGame.SetActive(false);
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !menuInGame.activeSelf)
@@ -28,7 +27,21 @@ public class MenuManager : MonoBehaviour
             ClosemenuInGame();
         }
     }
-
+    public void LooseLife()
+    {
+        if (vie > 0)
+        {
+            vie--;
+        }
+        if (vie <= 0)
+        {
+            Loose();
+        }
+    }
+    private void Loose()
+    {
+        menuInGame.SetActive(true);
+    }
     public void Jouer()
     {
         Time.timeScale = 1;
@@ -36,7 +49,7 @@ public class MenuManager : MonoBehaviour
     }
     public void MenuPrincipal()
     {
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("MainMenu");
     }
     public void OpenMenuCredits()
     {
@@ -90,5 +103,18 @@ public class MenuManager : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1;
+    }
+    public void GoFast()
+    {
+        Time.timeScale = 2;
     }
 }
