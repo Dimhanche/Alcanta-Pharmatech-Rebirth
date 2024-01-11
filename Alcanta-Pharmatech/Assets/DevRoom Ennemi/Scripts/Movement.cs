@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     int tailleList;
     int indexPlayer = 0;
     public int vie;
+    [SerializeField]int money;
     private void Start()
     {
         tailleList = movements.Count;
@@ -21,11 +22,6 @@ public class Movement : MonoBehaviour
         {
             indexPlayer++;
         }
-        if (indexPlayer >= tailleList)
-        {
-            Destroy(gameObject);
-            //vie--
-        }
         if(vie <= 0)
         {
             Die();
@@ -33,6 +29,7 @@ public class Movement : MonoBehaviour
     }
     public void Die()
     {
+        GameObject.Find("GameManager").GetComponent<Money>().Add(money);
         Destroy(this.gameObject);
     }
 }
