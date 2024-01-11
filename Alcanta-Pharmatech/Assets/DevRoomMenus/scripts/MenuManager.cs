@@ -32,7 +32,7 @@ public class MenuManager : MonoBehaviour
     public void Jouer()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(1);
     }
     public void MenuPrincipal()
     {
