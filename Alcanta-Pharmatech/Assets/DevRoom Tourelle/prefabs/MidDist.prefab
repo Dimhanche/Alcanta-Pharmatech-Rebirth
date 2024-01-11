@@ -45,10 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0048e8431b5fec14995fbc99a968ff2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inRange: []
   cooldown: 1
   damage: 5
-  parent: {fileID: 0}
+  range: 3
+  basic: {fileID: 2100000, guid: b586718a059638c419c12ecd61ee83e2, type: 2}
+  blood: {fileID: 2100000, guid: 94dcda20f9b021e43a41b965530423f0, type: 2}
 --- !u!1 &6892190365757432770
 GameObject:
   m_ObjectHideFlags: 0
