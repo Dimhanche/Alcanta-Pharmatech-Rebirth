@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -9,12 +10,17 @@ public class MenuManager : MonoBehaviour
     public GameObject menuOptions;
     public GameObject menuQuit;
     public GameObject menuInGame;
+    public Slider vieSlider;
     void Start()
     {
         menuCredits.SetActive(false);
         menuOptions.SetActive(false);
         menuQuit.SetActive(false);
         menuInGame.SetActive(false);
+        if(vieSlider != null)
+        {
+            vieSlider.value = vie;
+        }
     }
     void Update()
     {
@@ -32,10 +38,19 @@ public class MenuManager : MonoBehaviour
         if (vie > 0)
         {
             vie--;
+            vieSlider.value = vie;
         }
         if (vie <= 0)
         {
             Loose();
+        }
+    }
+    public void AddLife()
+    {
+        if(vie <3)
+        {
+            vie++;
+            vieSlider.value = vie;
         }
     }
     private void Loose()

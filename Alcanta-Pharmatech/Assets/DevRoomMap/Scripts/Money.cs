@@ -22,7 +22,7 @@ public class Money : MonoBehaviour
     }
     private void UpdateMoney()
     {
-        argentTxt.text = argent.ToString();
+        argentTxt.text = argent.ToString()+"¤";
     }
     public int GetMoney()
     {
