@@ -3,12 +3,11 @@ using UnityEngine;
 public class AudioShoot : MonoBehaviour
 {
     TurretMid tourelle;
-    public AudioClip audiosound;
     public AudioSource audiosource;
     // Start is called before the first frame update
     void Start()
     {
-        audiosource = GameObject.Find("GameManager").GetComponent<AudioSource>();
+        audiosource = gameObject.GetComponent<AudioSource>();
         tourelle = GetComponent<TurretMid>();
     }
 
