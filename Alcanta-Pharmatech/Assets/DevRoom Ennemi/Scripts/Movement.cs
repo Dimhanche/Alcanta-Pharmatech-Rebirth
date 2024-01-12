@@ -28,6 +28,7 @@ public class Movement : MonoBehaviour
     public void TakeDamage(int damage)
     {
         vie -= damage;
+        gameObject.GetComponentInChildren<ParticleSystem>().Play();
         if (vie <= 0)
         {
             GameObject.Find("GameManager").GetComponent<Money>().Add(money);
