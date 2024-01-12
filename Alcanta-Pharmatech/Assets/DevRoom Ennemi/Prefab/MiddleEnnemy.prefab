@@ -677,7 +677,6 @@ GameObject:
   - component: {fileID: 8985895828554238064}
   - component: {fileID: 6710428802042851817}
   - component: {fileID: 8268395329239419857}
-  - component: {fileID: 2447649948964437575}
   - component: {fileID: 422952320371338637}
   m_Layer: 6
   m_Name: Moyen
@@ -719,13 +718,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-    'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
-    'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
-    'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
-    'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'mixamo.com'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -757,22 +750,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 1
---- !u!114 &2447649948964437575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3710955217089900780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f67987d9925bdf34ca648f6ef6aaf47c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vitesse: 0.5
-  movements: []
-  vie: 20
-  money: 200
 --- !u!64 &422952320371338637
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1605,6 +1582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7015247279415303470}
   - component: {fileID: -2571595667834306034}
+  - component: {fileID: 6589605832608206428}
   m_Layer: 6
   m_Name: MiddleEnnemy
   m_TagString: ennemi
@@ -1649,6 +1627,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6589605832608206428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7121475071683096262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67987d9925bdf34ca648f6ef6aaf47c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesse: 0.5
+  movements: []
+  vie: 20
+  money: 200
 --- !u!1 &7143874722531789584
 GameObject:
   m_ObjectHideFlags: 0
