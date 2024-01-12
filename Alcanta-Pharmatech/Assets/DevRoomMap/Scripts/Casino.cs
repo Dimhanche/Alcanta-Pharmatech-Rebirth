@@ -46,7 +46,9 @@ public class Casino : MonoBehaviour
             }
             else
             {
+                res1.text = "";
                 res2.text = "Perdu";
+                res3.text = "";
             }
         }
     }

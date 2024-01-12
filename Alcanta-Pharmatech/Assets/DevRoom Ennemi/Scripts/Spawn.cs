@@ -30,9 +30,9 @@ public class Spawn : MonoBehaviour
                     fastEnnemi.GetComponent<Movement>().movements = waypoints;
                     break; 
                 case 1:
-                    GameObject midEnnemi = Instantiate(middleEnnemi, waypoints[0].transform.position, Quaternion.identity, ennemiParent) as GameObject;
+                    GameObject midEnnemi = Instantiate(middleEnnemi, waypoints[0].transform.position, Quaternion.Euler(0f, 180f, 0f), ennemiParent) as GameObject;
                     midEnnemi.name = nbEnnmiTotal.ToString() + "mid";
-                    midEnnemi.GetComponent<Movement>().movements = waypoints;
+                    midEnnemi.GetComponentInChildren<Movement>().movements = waypoints;
                     break;
                 default:
                     Debug.Log("Error");
