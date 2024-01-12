@@ -86,7 +86,7 @@ public class MenuManager : MonoBehaviour
     {
         Time.timeScale = 1;
         menuInGame.SetActive(false);
-
+        CloseMenu();
     }
     public void OpenMenuOptions()
     {
@@ -96,7 +96,9 @@ public class MenuManager : MonoBehaviour
     public void CloseMenuOptions()
     {
         menuOptions.SetActive(false);
+        ClosemenuInGame();
         CloseMenu();
+        Resume();
     }
     public void OpenQuitMenu()
     {

@@ -6336,7 +6336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1318838125}
   m_Layer: 5
-  m_Name: Menus
+  m_Name: Menus2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7983,6 +7983,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songs:
   - {fileID: 8300000, guid: 9c7b02a82ac8fa345a057cf294c5bc2e, type: 3}
+  - {fileID: 8300000, guid: 3d4de21daf2ad594d95312e1ab5d37c3, type: 3}
+  - {fileID: 8300000, guid: dd6b3e1ec2d5e1540bebbbf65740288c, type: 3}
   volume: 0.01
   volumeSlider: {fileID: 1714213104}
 --- !u!82 &1673830519
@@ -8395,10 +8397,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.25
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1673830518}
+        m_TargetAssemblyTypeName: Audio, Assembly-CSharp
+        m_MethodName: VolumeChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1721925784
 GameObject:
   m_ObjectHideFlags: 0
