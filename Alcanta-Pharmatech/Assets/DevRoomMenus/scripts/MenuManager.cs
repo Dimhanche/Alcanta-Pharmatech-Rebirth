@@ -24,13 +24,15 @@ public class MenuManager : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !menuInGame.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Mouse2) && !menuInGame.activeSelf)
         {
             OpenmenuInGame();
+            OpenMenuOptions();
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && menuInGame.activeSelf)
+        else if (Input.GetKeyDown(KeyCode.Mouse2) && menuInGame.activeSelf)
         {
             ClosemenuInGame();
+            CloseMenuOptions();
         }
     }
     public void LooseLife()
@@ -94,6 +96,7 @@ public class MenuManager : MonoBehaviour
     public void CloseMenuOptions()
     {
         menuOptions.SetActive(false);
+        CloseMenu();
     }
     public void OpenQuitMenu()
     {
