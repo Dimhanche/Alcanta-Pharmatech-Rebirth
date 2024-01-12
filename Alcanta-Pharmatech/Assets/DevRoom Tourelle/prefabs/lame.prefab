@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3315559693192704974}
   - component: {fileID: 815416752992263915}
   - component: {fileID: 7667087605184443058}
-  - component: {fileID: 6173107789134276342}
   m_Layer: 7
   m_Name: lame
   m_TagString: Untagged
@@ -51,7 +50,7 @@ MonoBehaviour:
   cooldown: 1.5
   damage: 10
   range: 1.5
-  anim: {fileID: 5866666021909216657, guid: 76f20d91fc3092d48a2ff2f552c88dae, type: 3}
+  testEnnemy: {fileID: 0}
 --- !u!65 &815416752992263915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71,8 +70,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9, y: 0.5, z: 0.9}
+  m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!82 &7667087605184443058
 AudioSource:
   m_ObjectHideFlags: 0
@@ -169,33 +168,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!54 &6173107789134276342
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3780148039994498205}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
 --- !u!1001 &216173612518125617
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,7 +8,8 @@ public class TurretMid : MonoBehaviour
     [SerializeField]int damage = 5;
     [SerializeField]float range = 3;
     bool shoot = false;
-    public Animator anim;
+    public GameObject testEnnemy;
+    [SerializeField] float roty;
 
     private void Start()
     {
@@ -19,16 +20,16 @@ public class TurretMid : MonoBehaviour
         shoot = false;
         foreach(GameObject ennemi in GameObject.FindGameObjectsWithTag("ennemi"))
         {
-            if(Vector3.Distance(ennemi.transform.position,this.gameObject.transform.position)<=range &&!shoot)
+            if (Vector3.Distance(ennemi.transform.position, this.gameObject.transform.position) <= range && !shoot)
             {
                 shoot = true;
                 if (ennemi != null)
                 {
-                    anim = ennemi.GetComponent<Animator>();
-                    anim.SetBool("Damage",true);
-                    gameObject.GetComponentInChildren<Transform>().LookAt(ennemi.transform.position);
-                    anim.SetBool("Damage", false);
-                    ennemi.GetComponent<Movement>().vie -= damage;
+                    testEnnemy = ennemi;
+                    gameObject.GetComponent<Transform>().LookAt(ennemi.transform.position);
+                    roty = gameObject.GetComponent<Transform>().rotation.y;
+                    gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0, roty*10, 0);
+                    ennemi.GetComponent<Movement>().TakeDamage(damage);
                 }
             }
         }
