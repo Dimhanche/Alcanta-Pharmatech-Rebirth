@@ -2,12 +2,18 @@ using UnityEngine;
 
 public class SelectCase : MonoBehaviour
 {
+    MenuManager tuto;
     [SerializeField]private GameObject select,marketHud,cameraIso;
+    private void Start()
+    {
+        tuto = GameObject.Find("MenuManager").GetComponent<MenuManager>();
+    }
     void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 50) && Input.GetMouseButtonDown(0))
+
+        if (Physics.Raycast(ray, out hit, 50) && Input.GetMouseButtonDown(0) && !tuto.menututo.activeSelf)
         {
             if(hit.collider.tag == "ground")
             {

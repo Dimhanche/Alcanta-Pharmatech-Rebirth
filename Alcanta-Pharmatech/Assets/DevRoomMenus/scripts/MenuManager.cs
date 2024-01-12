@@ -11,12 +11,16 @@ public class MenuManager : MonoBehaviour
     public GameObject menuQuit;
     public GameObject menuInGame;
     public Slider vieSlider;
+    public GameObject menututo;
     void Start()
     {
+        Time.timeScale = 0;
         menuCredits.SetActive(false);
         menuOptions.SetActive(false);
         menuQuit.SetActive(false);
         menuInGame.SetActive(false);
+
+        
         if(vieSlider != null)
         {
             vieSlider.value = vie;
@@ -136,5 +140,10 @@ public class MenuManager : MonoBehaviour
     public void GoFast()
     {
         Time.timeScale = 2;
+    }
+    public void CloseMenututo()
+    {
+        menututo.SetActive(false);
+        Time.timeScale = 1;
     }
 }
