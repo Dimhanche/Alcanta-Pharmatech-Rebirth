@@ -23,10 +23,6 @@ public class Movement : MonoBehaviour
         {
             indexPlayer++;
         }
-        if(vie <= 0)
-        {
-            Die();
-        }
     }
 
     public void TakeDamage(int damage)
@@ -35,7 +31,10 @@ public class Movement : MonoBehaviour
     }
     public void Die()
     {
-        GameObject.Find("GameManager").GetComponent<Money>().Add(money);
-        Destroy(this.gameObject);
+        if(vie <= 0)
+        {
+            GameObject.Find("GameManager").GetComponent<Money>().Add(money);
+            Destroy(this.gameObject);
+        }
     }
 }
