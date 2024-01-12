@@ -8,8 +8,7 @@ public class TurretMid : MonoBehaviour
     [SerializeField]int damage = 5;
     [SerializeField]float range = 3;
      public bool shoot = false;
-    public GameObject testEnnemy;
-    [SerializeField] float roty;
+    [SerializeField] bool canRot;
 
     private void Start()
     {
@@ -25,10 +24,10 @@ public class TurretMid : MonoBehaviour
                 shoot = true;
                 if (ennemi != null)
                 {
-                    testEnnemy = ennemi;
-                    gameObject.GetComponent<Transform>().LookAt(ennemi.transform.position);
-                    roty = gameObject.GetComponent<Transform>().rotation.y;
-                    gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0, roty*10, 0);
+                    if (canRot)
+                    {
+                        gameObject.GetComponent<Transform>().LookAt(ennemi.transform.position);
+                    }
                     ennemi.GetComponent<Movement>().TakeDamage(damage);
                 }
             }
