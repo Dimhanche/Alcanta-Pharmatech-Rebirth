@@ -4,6 +4,7 @@ public class AudioShoot : MonoBehaviour
 {
     TurretMid tourelle;
     public AudioSource audiosource;
+    public bool AlreadyPlayed;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,11 +13,12 @@ public class AudioShoot : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (tourelle.shoot)
+        if (tourelle.shoot && !AlreadyPlayed)
         {
             audiosource.Play();
+            AlreadyPlayed = true;
         }
     }
 }

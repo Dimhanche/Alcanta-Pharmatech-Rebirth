@@ -9,13 +9,15 @@ public class TurretMid : MonoBehaviour
     [SerializeField]float range = 3;
      public bool shoot = false;
     [SerializeField] bool canRot;
-
+    AudioShoot isPlayedAlready;
     private void Start()
     {
+        isPlayedAlready = GetComponent<AudioShoot>();
         StartCoroutine(Shoot());
     }
     IEnumerator Shoot()
     {
+        isPlayedAlready.AlreadyPlayed = false;
         shoot = false;
         foreach(GameObject ennemi in GameObject.FindGameObjectsWithTag("ennemi"))
         {

@@ -7929,7 +7929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   argentTxt: {fileID: 1043681047}
-  argent: 1000
+  argent: 999999999
 --- !u!114 &1673830516
 MonoBehaviour:
   m_ObjectHideFlags: 0
