@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DevRoomMap/Scene/Map.unity
     guid: 157d435b5ad0c7148bb7c4a7227ca49b
+  - enabled: 1
+    path: Assets/DevRoomMenus/EndMenu.unity
+    guid: 88c5fe02a3544e44db32962298beb82c
   m_configObjects: {}
