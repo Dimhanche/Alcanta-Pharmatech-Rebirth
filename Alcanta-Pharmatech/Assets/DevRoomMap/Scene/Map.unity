@@ -7984,8 +7984,7 @@ MonoBehaviour:
   songs:
   - {fileID: 8300000, guid: 9c7b02a82ac8fa345a057cf294c5bc2e, type: 3}
   - {fileID: 8300000, guid: 3d4de21daf2ad594d95312e1ab5d37c3, type: 3}
-  - {fileID: 8300000, guid: dd6b3e1ec2d5e1540bebbbf65740288c, type: 3}
-  volume: 0.01
+  volume: 0.25
   volumeSlider: {fileID: 1714213104}
 --- !u!82 &1673830519
 AudioSource:
