@@ -7,7 +7,7 @@ public class TurretMid : MonoBehaviour
     [SerializeField]float cooldown = 1;
     [SerializeField]int damage = 5;
     [SerializeField]float range = 3;
-    bool shoot = false;
+     public bool shoot = false;
     public GameObject testEnnemy;
     [SerializeField] float roty;
 
