@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class AudioShoot : MonoBehaviour
 {
-    TurretMid tourelle;
+    Turret tourelle;
     public AudioSource audiosource;
     public bool AlreadyPlayed;
     // Start is called before the first frame update
     void Start()
     {
         audiosource = gameObject.GetComponent<AudioSource>();
-        tourelle = GetComponent<TurretMid>();
+        tourelle = GetComponent<Turret>();
     }
 
     // Update is called once per frame
