@@ -50,8 +50,9 @@ MonoBehaviour:
   cooldown: 6
   damage: 40
   range: 6
+  shoot: 0
   testEnnemy: {fileID: 0}
-  roty: 0
+  canRot: 1
 --- !u!65 &4280818774384647276
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -28,10 +28,7 @@ public class Movement : MonoBehaviour
     public void TakeDamage(int damage)
     {
         vie -= damage;
-    }
-    public void Die()
-    {
-        if(vie <= 0)
+        if (vie <= 0)
         {
             GameObject.Find("GameManager").GetComponent<Money>().Add(money);
             Destroy(this.gameObject);
