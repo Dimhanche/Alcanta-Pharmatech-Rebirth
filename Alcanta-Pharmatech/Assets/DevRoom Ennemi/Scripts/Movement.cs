@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, movements[indexPlayer].transform.position, Time.deltaTime * vitesse);
+        gameObject.transform.LookAt(movements[indexPlayer].transform.position);
         if (Vector3.Distance(this.gameObject.transform.position, movements[indexPlayer].transform.position) <= 0.1)
         {
             indexPlayer++;
