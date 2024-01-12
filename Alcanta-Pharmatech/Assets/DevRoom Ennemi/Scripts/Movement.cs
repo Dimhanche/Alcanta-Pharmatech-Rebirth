@@ -28,6 +28,11 @@ public class Movement : MonoBehaviour
             Die();
         }
     }
+
+    public void TakeDamage(int damage)
+    {
+        vie -= damage;
+    }
     public void Die()
     {
         GameObject.Find("GameManager").GetComponent<Money>().Add(money);
