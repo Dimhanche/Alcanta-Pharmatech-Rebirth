@@ -57,7 +57,7 @@ public class MenuManager : MonoBehaviour
     }
     private void Loose()
     {
-        menuInGame.SetActive(true);
+        SceneManager.LoadScene(2);
     }
     public void Jouer()
     {
