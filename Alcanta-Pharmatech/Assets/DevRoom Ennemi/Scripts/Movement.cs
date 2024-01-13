@@ -5,13 +5,13 @@ public class Movement : MonoBehaviour
 {
     [SerializeField]private float vitesse;
     [SerializeField]public List<GameObject> movements = new List<GameObject>();
-    int tailleList;
     int indexPlayer = 0;
     public int vie;
     [SerializeField]int money;
+    public bool isAttacked = false;
     private void Start()
     {
-        tailleList = movements.Count;
+        isAttacked = false;
         Physics.IgnoreLayerCollision(6, 6, true);
     }
 
@@ -23,6 +23,12 @@ public class Movement : MonoBehaviour
         {
             indexPlayer++;
         }
+        if(indexPlayer >= movements.Count)
+        {
+            MenuManager manager = GameObject.Find("MenuManager").GetComponent<MenuManager>();
+            manager.LooseLife();
+            Destroy(gameObject);
+        }
     }
 
     public void TakeDamage(int damage)
@@ -33,6 +39,9 @@ public class Movement : MonoBehaviour
         {
             GameObject.Find("GameManager").GetComponent<Money>().Add(money);
             Destroy(this.gameObject);
+            return;
         }
+        isAttacked = false;
+
     }
 }

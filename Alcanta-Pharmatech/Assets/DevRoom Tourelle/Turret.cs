@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-public class TurretMid : MonoBehaviour
+public class Turret : MonoBehaviour
 {
     [SerializeField]float cooldown = 1;
     [SerializeField]int damage = 5;
@@ -10,6 +10,7 @@ public class TurretMid : MonoBehaviour
      public bool shoot = false;
     [SerializeField] bool canRot;
     AudioShoot isPlayedAlready;
+    [SerializeField] GameObject target;
     private void Start()
     {
         isPlayedAlready = GetComponent<AudioShoot>();
@@ -21,18 +22,24 @@ public class TurretMid : MonoBehaviour
         shoot = false;
         foreach(GameObject ennemi in GameObject.FindGameObjectsWithTag("ennemi"))
         {
-            if (Vector3.Distance(ennemi.transform.position, this.gameObject.transform.position) <= range && !shoot)
+            target = ennemi;
+            if (target != null)
             {
-                shoot = true;
-                if (ennemi != null)
+                if (target.GetComponent<Movement>().isAttacked == false)
                 {
-                    if (canRot)
+                    if (Vector3.Distance(target.transform.position, gameObject.transform.position) <= range && !shoot)
                     {
-                        gameObject.GetComponent<Transform>().LookAt(ennemi.transform.position);
+                        target.GetComponent<Movement>().isAttacked = true;
+                        shoot = true;
+                        if (canRot)
+                        {
+                            gameObject.GetComponentInChildren<Transform>().LookAt(target.transform.position);
+                        }
+                        target.GetComponent<Movement>().TakeDamage(damage);
                     }
-                    ennemi.GetComponent<Movement>().TakeDamage(damage);
                 }
             }
+            
         }
         yield return new WaitForSeconds(cooldown);
         StartCoroutine(Shoot());
