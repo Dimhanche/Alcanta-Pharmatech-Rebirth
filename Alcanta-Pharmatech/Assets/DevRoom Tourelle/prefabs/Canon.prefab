@@ -52,7 +52,7 @@ MonoBehaviour:
   damage: 40
   range: 6
   shoot: 0
-  canRot: 1
+  canRot: 0
 --- !u!65 &4280818774384647276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audiosource: {fileID: 7285412395405090850}
+  AlreadyPlayed: 0
 --- !u!1001 &2537091260492596068
 PrefabInstance:
   m_ObjectHideFlags: 0

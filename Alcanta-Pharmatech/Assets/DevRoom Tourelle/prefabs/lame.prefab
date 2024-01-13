@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audiosource: {fileID: 7667087605184443058}
+  AlreadyPlayed: 0
 --- !u!1001 &216173612518125617
 PrefabInstance:
   m_ObjectHideFlags: 0
