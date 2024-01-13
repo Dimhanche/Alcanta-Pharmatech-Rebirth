@@ -4910,6 +4910,7 @@ MonoBehaviour:
   movements: []
   vie: 15
   money: 100
+  isAttacked: 0
 --- !u!95 &7871841156663551589
 Animator:
   serializedVersion: 5
