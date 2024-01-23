@@ -12,6 +12,7 @@ public class Audio : MonoBehaviour
     void Start()
     {
         _audiosource = GetComponent<AudioSource>();
+        volumeSlider.value = PlayerPrefs.GetFloat("volume",.5f);
         if (!_audiosource.isPlaying && Time.timeScale == 1)
             ChangeSong(Random.Range(0, songs.Length));
     }
@@ -37,6 +38,7 @@ public class Audio : MonoBehaviour
         {
             volume = volumeSlider.value;
             PlayerPrefs.SetFloat("Volume", volume);
+            PlayerPrefs.SetFloat("volume", volumeSlider.value);
         }
     }
 }
